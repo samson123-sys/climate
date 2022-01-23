@@ -1,4 +1,6 @@
 const PORT = process.env.PORT || 8000
+
+app.listen(PORT, () => console.log('Listening to climate change 8000'))
 const express = require('express')
 const axios = require('axios')
 const cheerio = require('cheerio')
@@ -61,7 +63,7 @@ newspapers.forEach((newspaper) => {
       })
 })
 
-app.get('/home', function (req, res) {
+app.get('/', function (req, res) {
         res.json('Welcome to my weather news api')
     })
 
